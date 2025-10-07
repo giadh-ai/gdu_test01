@@ -112,7 +112,7 @@ export const products: Product[] = [
     image: "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_t.png",
   },
   {
-    id: 12,
+    id: 13,
     title:
       "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
     price: 114,

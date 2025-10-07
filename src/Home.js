@@ -5,10 +5,21 @@ const Home = () => {
   var str = "K18-Đại học Gia Định";
   var dssv = ["Nguyễn Văn An", "Trần Văn Ba", "Nguyễn Văn Cường"];
   var ds2 = [
-    { id: "001", hoten: "Nguyễn Văn An", lop: "K18" },
-    { id: "002", hoten: "Trần Văn Ba", lop: "K18" },
-    { id: "003", hoten: "Nguyễn Văn Cường", lop: "K18" },
+    { id: "001", hoten: "Nguyễn Thị An", lop: "K18", gioitinh: false },
+    { id: "002", hoten: "Trần Văn Ba", lop: "K18", gioitinh: true },
+    { id: "003", hoten: "Nguyễn Văn Cường", lop: "K18", gioitinh: true },
+    { id: "007", hoten: "Nguyễn Văn Bảy", lop: "phicong", gioitinh: true },
   ];
+
+  const TestSuaDL = (id) => {
+    array2.map((item) => {
+      if (item.id === id) {
+        item.hoten = "Ronaldo";
+        console.log("item.hoten=" + item.hoten);
+      }
+      return item;
+    });
+  };
 
   return (
     <div>
@@ -27,13 +38,27 @@ const Home = () => {
             <td>ID</td>
             <td>Họ tên</td>
             <td>Lớp</td>
+            <td>Giới tính</td>
+            <td>Sửa DL</td>
           </tr>
           {ds2.map((sv) => {
             return (
               <tr>
                 <td>{sv.id}</td>
-                <td>{sv.hoten}</td>
+                <td>
+                  <input type="textbox" value={sv.hoten} />
+                </td>
                 <td>{sv.lop}</td>
+                <td>
+                  <input type="checkbox" checked={sv.gioitinh} />
+                </td>
+                <td>
+                  <input
+                    type="button"
+                    value="Sửa"
+                    onClick={TestSuaDL.bind(this, x.id)}
+                  />
+                </td>
               </tr>
             );
           })}
