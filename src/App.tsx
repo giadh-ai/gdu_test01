@@ -1,7 +1,11 @@
 import "./styles.css";
+// @ts-ignore
 import Home from "./Home";
+// @ts-ignore
 import Layout from "./Layout";
+// @ts-ignore
 import Trang1 from "./Trang1";
+// @ts-ignore
 import Chitietsanpham from "./Chitietsanpham";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
