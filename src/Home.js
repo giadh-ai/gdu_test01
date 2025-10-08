@@ -12,7 +12,7 @@ const Home = () => {
   ];
 
   const TestSuaDL = (id) => {
-    array2.map((item) => {
+    ds2.map((item) => {
       if (item.id === id) {
         item.hoten = "Ronaldo";
         console.log("item.hoten=" + item.hoten);
@@ -56,7 +56,7 @@ const Home = () => {
                   <input
                     type="button"
                     value="Sửa"
-                    onClick={TestSuaDL.bind(this, x.id)}
+                    onClick={TestSuaDL.bind(this, sv.id)}
                   />
                 </td>
               </tr>
