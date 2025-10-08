@@ -5,14 +5,14 @@ const Home = () => {
   var str = "K18-Đại học Gia Định";
   var dssv = ["Nguyễn Văn An", "Trần Văn Ba", "Nguyễn Văn Cường"];
   var ds2 = [
-    { id: "001", hoten: "Nguyễn Thị An", lop: "K18", gioitinh: false },
+    { id: "001", hoten: "Nguyễn Thị An11", lop: "K18", gioitinh: false },
     { id: "002", hoten: "Trần Văn Ba", lop: "K18", gioitinh: true },
     { id: "003", hoten: "Nguyễn Văn Cường", lop: "K18", gioitinh: true },
     { id: "007", hoten: "Nguyễn Văn Bảy", lop: "phicong", gioitinh: true },
   ];
 
   const TestSuaDL = (id) => {
-    array2.map((item) => {
+    ds2.map((item) => {
       if (item.id === id) {
         item.hoten = "Ronaldo";
         console.log("item.hoten=" + item.hoten);
@@ -56,7 +56,7 @@ const Home = () => {
                   <input
                     type="button"
                     value="Sửa"
-                    onClick={TestSuaDL.bind(this, x.id)}
+                    onClick={TestSuaDL.bind(this, sv.id)}
                   />
                 </td>
               </tr>
