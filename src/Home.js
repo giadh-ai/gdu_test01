@@ -3,7 +3,7 @@ const Home = () => {
   var day = 10;
   var month = 10;
   var str = "K18-Đại học Gia Định";
-  var dssv = ["Nguyễn Văn An", "Trần Văn Ba", "Nguyễn Văn Cường"];
+  var dssv = ["Nguyễn Văn An111", "Trần Văn Ba", "Nguyễn Văn Cường"];
   var ds2 = [
     { id: "001", hoten: "Nguyễn Thị An11", lop: "K18", gioitinh: false },
     { id: "002", hoten: "Trần Văn Ba", lop: "K18", gioitinh: true },
