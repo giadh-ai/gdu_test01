@@ -19,7 +19,7 @@ const Layout = () => {
         <div class="header">
           <div class="container_main">
             <div class="logo">
-              <a href="">
+              <a href="/">
                 <img
                   src="https://giadinh.edu.vn/upload/photo/logogdu-02-5690.png"
                   alt="Logo"
