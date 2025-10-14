@@ -3,11 +3,11 @@ const MenuTop = () => {
     <div class="menu_top">
       <ul>
         <li>
-          <a href="/trang1">Tuyển sinh</a>
+          <a href="/trang1">Trang 1</a>
         </li>
         <li>
           <a target="blank" href="/trang2">
-            Sau Đại Học
+            Trang 2
           </a>
         </li>
         <li>
