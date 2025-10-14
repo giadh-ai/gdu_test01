@@ -28,6 +28,13 @@ const Trang2 = () => {
       email: "abc@cuong.edu.vn",
       anh: "https://studiochupanhdep.com//Upload/Images/Album/anh-beauty-01.jpg",
     },
+    {
+      id: 5,
+      hoten: "Nguyễn Thị Hòa Minzi",
+      lop: "K19",
+      email: "hoaminzi@gdu.edu.vn",
+      anh: "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1OnhWi.img?w=720&h=960&m=6&x=247&y=169&s=278&d=278",
+    },
   ];
 
   return (
