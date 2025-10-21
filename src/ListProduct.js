@@ -33,7 +33,7 @@ const ListProduct = () => {
           gap: "16px",
         }}
       >
-        {products.map((p) => (
+        {listproduct.map((p) => (
           <div
             key={p.id}
             onClick={() => navigate(`/sanpham/${p.id}`)}
