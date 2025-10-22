@@ -22,7 +22,15 @@ export default function Chitietsanpham() {
       <button onClick={() => navigate(-1)} style={{ marginBottom: "20px" }}>
         ⬅ Quay lại
       </button>
-
+      <a class="edit-button" href={"/editproduct/" + product.id}>
+        {" "}
+        Edit Product
+      </a>
+      &nbsp;&nbsp;&nbsp;
+      <a class="edit-button" href={"/add-product"}>
+        {" "}
+        Add Product
+      </a>
       <div style={{ display: "flex", gap: "20px", alignItems: "flex-start" }}>
         <img
           src={product.image}

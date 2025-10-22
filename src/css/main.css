@@ -9,3 +9,83 @@
   padding: 8px;
   text-align: left;
 }
+
+/************Edit Product********/
+#div_edit {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.edit-product-form {
+  display: flex;
+  flex-direction: column; /* sắp xếp các phần tử theo chiều dọc */
+  width: 400px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  gap: 15px; /* khoảng cách giữa các trường */
+}
+
+.edit-product-form label {
+  display: flex;
+  flex-direction: column; /* label nằm trên input */
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.edit-product-form input,
+.edit-product-form textarea {
+  margin-top: 6px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+  transition: border-color 0.3s;
+}
+
+.edit-product-form input:focus,
+.edit-product-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.edit-product-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.save-button,
+.cancel-button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.save-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.save-button:hover {
+  background-color: #0056b3;
+}
+
+.cancel-button {
+  background-color: #6c757d;
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #565e64;
+}

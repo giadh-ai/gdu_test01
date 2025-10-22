@@ -9,6 +9,8 @@ import Trang1 from "./Trang1";
 import Trang2 from "./Trang2";
 // @ts-ignore
 import ListProduct from "./ListProduct.js";
+// @ts-ignore
+import EditProduct from "./EditProduct.js";
 
 //@ts-ignore
 import Chitietsanpham from "./Chitietsanpham";
@@ -24,6 +26,8 @@ export default function App() {
           <Route path="trang1" element={<Trang1 />} />
           <Route path="trang2" element={<Trang2 />} />
           <Route path="sanpham/:id" element={<Chitietsanpham />} />
+          <Route index path="/editproduct/:id" element={<EditProduct />} />
+          <Route index path="/add-product" element={<EditProduct />} />
         </Route>
       </Routes>
     </BrowserRouter>
