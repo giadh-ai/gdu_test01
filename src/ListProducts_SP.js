@@ -1,26 +1,27 @@
-import { products } from "./models/product";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { supabase } from "../supabaseClient";
 
-const ListProduct = () => {
-  const [listproduct, SetListProduct] = useState([]);
+const ListProducts_SP = () => {
+  const [listProduct, setListProduct] = useState([]);
+  const navigate = useNavigate();
+
   useEffect(() => {
-    const LayDulieutuBackend = async () => {
+    const fetchProducts = async () => {
       try {
-        const res = await axios.get(
-          "https://6731c05f7aaf2a9aff11dd05.mockapi.io/products"
-        );
-        SetListProduct(res.data);
+        const { data, error } = await supabase
+          .from("products1")
+          .select("*")
+          .order("id", { ascending: true });
+        if (error) throw error;
+        setListProduct(data);
       } catch (err) {
-        console.log(err.message);
+        console.error("Lỗi khi lấy dữ liệu:", err.message);
       }
     };
-    LayDulieutuBackend(); // Gọi hàm để lấy dữ liệu từ backend khi component được render lần đầu.
-  }, []); // Tham số thứ hai là mảng rỗng, giúp useEffect chỉ chạy một lần khi component được gắn vào DOM.
+    fetchProducts();
+  }, []);
 
-  const navigate = useNavigate();
   return (
     <div style={{ padding: "20px" }}>
       <h2>Danh sách sản phẩm</h2>
@@ -31,7 +32,7 @@ const ListProduct = () => {
           gap: "16px",
         }}
       >
-        {listproduct.map((p) => (
+        {listProduct.map((p) => (
           <div
             key={p.id}
             onClick={() => navigate(`/sanpham/${p.id}`)}
@@ -40,6 +41,7 @@ const ListProduct = () => {
               borderRadius: "8px",
               padding: "10px",
               textAlign: "center",
+              cursor: "pointer",
             }}
           >
             <img
@@ -49,10 +51,14 @@ const ListProduct = () => {
             />
             <h4>{p.title}</h4>
             <p>${p.price}</p>
+            <small>
+              ⭐ {p.rating_rate} | ({p.rating_count} đánh giá)
+            </small>
           </div>
         ))}
       </div>
     </div>
   );
 };
-export default ListProduct;
+
+export default ListProducts_SP;
