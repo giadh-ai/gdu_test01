@@ -15,6 +15,10 @@ import ListProducts_SP from "./ListProducts_SP.js";
 
 //@ts-ignore
 import Chitietsanpham from "./Chitietsanpham";
+
+//@ts-ignore
+import ProductDetail from "./ProductDetail";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export default function App() {
@@ -27,6 +31,7 @@ export default function App() {
           <Route path="trang1" element={<Trang1 />} />
           <Route path="trang2" element={<Trang2 />} />
           <Route path="sanpham/:id" element={<Chitietsanpham />} />
+          <Route path="detail/:id" element={<ProductDetail />} />
         </Route>
       </Routes>
     </BrowserRouter>
